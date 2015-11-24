@@ -37,3 +37,11 @@
   border-top-color: $brand-primary;
   font-weight: bold;
 }
+
+footer {
+  background-color: $gray-lightest;
+  border-top: 1px solid $gray-lighter;
+  color: $gray;
+  padding: 1.25rem 0 1.5rem 0;
+  font-size: .875rem;
+}

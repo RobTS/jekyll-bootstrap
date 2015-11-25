@@ -4,6 +4,10 @@
 @import "variables";
 @import "bootstrap/bootstrap";
 
+.auth {
+  background-color: $gray-dark;
+}
+
 .navbar-nav .nav-link {
   padding-top: .25rem;
   padding-bottom: .25rem;

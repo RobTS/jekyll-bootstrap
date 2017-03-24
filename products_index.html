@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Bootstrap Admin</title>
+    <meta name="description" content="Admin Template made with Bootstrap 4">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="products">
+    <nav id="navbar" class="navbar-dark">
+  <ul>
+    <li class="brand">
+      <a href="../index.html">Dashboard</a>
+    </li>
+    <li>
+      <a href="#">Sales</a>
+      <ul>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Shipments</a></li>
+      </ul>
+    </li>
+    <li class="active">
+      <a href="products_index.html">Products</a>
+      <ul>
+        <li><a href="products_index.html">Catalog</a></li>
+        <li><a href="#">Inventory</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Customers</a>
+    </li>
+    <li>
+      <a href="#">Marketing</a>
+    </li>
+    <li>
+      <a href="#">Content</a>
+      <ul>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Themes</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Reports</a>
+      <ul>
+        <li>
+          <a href="#">Sales <i class="fa fa-caret-right pull-right"></i></a>
+          <ul>
+            <li><a href="#">Sales by month</a></li>
+            <li><a href="#">Sales by product</a></li>
+            <li><a href="#">Sales by hour</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Products <i class="fa fa-caret-right pull-right"></i></a>
+          <ul>
+            <li><a href="#">Views</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">Low Stock</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Customers <i class="fa fa-caret-right pull-right"></i></a>
+          <ul>
+            <li><a href="#">Visits over time</a></li>
+            <li><a href="#">Visitors by referrer</a></li>
+            <li><a href="#">Visitors by marketing campaigns</a></li>
+            <li><a href="#">Visitors by location</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Finances <i class="fa fa-caret-right pull-right"></i></a>
+          <ul>
+            <li><a href="#">Finances summary</a></li>
+            <li><a href="#">Total sales</a></li>
+            <li><a href="#">Taxes</a></li>
+            <li><a href="#">Payments</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">System</a>
+    </li>
+  </ul>
+
+  <ul class="pull-right">
+    <li>
+      <form class="form-inline">
+        <input class="form-control navbar-search-input" type="text" placeholder="Search">
+      </form>
+    </li>
+    <li>
+      <a href="#">Settings</a>
+      <ul class="right">
+        <li><a href="#">Your profile</a></li>
+        <li><a href="#">Log out</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    
+      <div id="header" class="back-to-top">
+        
+  <h1>
+    <i class="fa fa-tag"></i>
+    Products
+  </h1>
+  <div class="pull-right">
+    <div class="btn-group">
+      <a href="#" class="btn btn-secondary">Export</a>
+      <a href="#" class="btn btn-secondary">Import</a>
+    </div>
+    <a href="#" class="btn btn-primary">Add product</a>
+  </div>
+
+      </div>
+    
+
+    <div id="wrapper" class="container-fluid">
+      
+
+<div class="box box-xl">
+  <div class="box-header">
+    <form class="form-search">
+      <div class="row">
+
+        <div class="col">
+          <div class="field">
+            <label>ID</label>
+            <input type="number" class="input-sm">
+          </div>
+          <div class="field">
+            <label>Name</label>
+            <input type="text">
+          </div>
+          <div class="field">
+            <label>Price</label>
+            <input type="number" class="input-sm">
+            <i class="fa fa-chevron-right"></i>
+            <input type="number" class="input-sm">
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="field">
+            <label>Status</label>
+            <input id="status_all" type="radio" name="status" value="" checked>
+            <label for="status_all">All</label>
+            <input id="status_enabled" type="radio" name="status" value="enabled">
+            <label for="status_enabled">Enabled</label>
+            <input id="status_disabled" type="radio" name="status" value="disabled">
+            <label for="status_disabled">Disabled</label>
+          </div>
+          <div class="field">
+            <label>Category</label>
+            <select>
+              <option></option>
+              <option>Clothing</option>
+              <option>Shoes</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="actions">
+        <input type="submit" value="Search" class="btn">
+        <small class="text-muted ml-1">21 results</small>
+      </div>
+    </form>
+  </div>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th class="checkbox"><input type="checkbox" class="select-all"></th>
+        <th></th>
+        <th><a href="#">Name &#9650;</a></th>
+        <th><a href="#">Category</a></th>
+        <th><a href="#">Price</a></th>
+        <th><a href="#">Status</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">T-Shirt</a></td>
+          <td>Clothing</td>
+          <td>$29,90</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Jacket</a></td>
+          <td>Clothing</td>
+          <td>$125,00</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Running Shoe</a></td>
+          <td>Shoes</td>
+          <td>$160,00</td>
+          <td>Enabled</td>
+        </tr>
+      
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">T-Shirt</a></td>
+          <td>Clothing</td>
+          <td>$29,90</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Jacket</a></td>
+          <td>Clothing</td>
+          <td>$125,00</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Running Shoe</a></td>
+          <td>Shoes</td>
+          <td>$160,00</td>
+          <td>Enabled</td>
+        </tr>
+      
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">T-Shirt</a></td>
+          <td>Clothing</td>
+          <td>$29,90</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Jacket</a></td>
+          <td>Clothing</td>
+          <td>$125,00</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Running Shoe</a></td>
+          <td>Shoes</td>
+          <td>$160,00</td>
+          <td>Enabled</td>
+        </tr>
+      
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">T-Shirt</a></td>
+          <td>Clothing</td>
+          <td>$29,90</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Jacket</a></td>
+          <td>Clothing</td>
+          <td>$125,00</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Running Shoe</a></td>
+          <td>Shoes</td>
+          <td>$160,00</td>
+          <td>Enabled</td>
+        </tr>
+      
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">T-Shirt</a></td>
+          <td>Clothing</td>
+          <td>$29,90</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Jacket</a></td>
+          <td>Clothing</td>
+          <td>$125,00</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Running Shoe</a></td>
+          <td>Shoes</td>
+          <td>$160,00</td>
+          <td>Enabled</td>
+        </tr>
+      
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">T-Shirt</a></td>
+          <td>Clothing</td>
+          <td>$29,90</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Jacket</a></td>
+          <td>Clothing</td>
+          <td>$125,00</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Running Shoe</a></td>
+          <td>Shoes</td>
+          <td>$160,00</td>
+          <td>Enabled</td>
+        </tr>
+      
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">T-Shirt</a></td>
+          <td>Clothing</td>
+          <td>$29,90</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Jacket</a></td>
+          <td>Clothing</td>
+          <td>$125,00</td>
+          <td>Enabled</td>
+        </tr>
+        <tr>
+          <td class="checkbox"><input type="checkbox"></td>
+          <td class="thumb"><a href="products_show.html"><i class="fa fa-picture-o"></a></td>
+          <td><a href="products_show.html">Running Shoe</a></td>
+          <td>Shoes</td>
+          <td>$160,00</td>
+          <td>Enabled</td>
+        </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/backToTop.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

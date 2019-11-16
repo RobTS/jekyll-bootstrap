@@ -1,14 +1,65 @@
 ---
 ---
+
 @import "variables";
 @import "bootstrap/bootstrap";
 
+body, html {
+  width: 100%;
+  height: 100%;
+}
 
 .starter-template {
   text-align: center;
-  margin-top: 10rem;
-
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: #00b3ee;
+  color: #ffffff;
   .lead {
     font-weight: 200;
   }
 }
+
+.starter-template-small {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #00b3ee;
+  color: #ffffff;
+  .lead {
+    font-weight: 200;
+  }
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.paragraph {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+.full {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.footer {
+  clear: both;
+  position: relative;
+  z-index: 10;
+  height: 30px;
+  margin-top: -30px;
+  color: #9d9d9d;
+  background-color: #222;
+}
+
+.footer-text {
+  margin-bottom: 0;
+}
+
